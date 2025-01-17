@@ -1,0 +1,67 @@
+laravel-hs/
+├── app/
+  ├── Providers/
+    ├── Filament/
+       ├── AdminPanelProvider.php
+    ├── AppServiceProvider.php
+    ├── AuthServiceProvider.php
+  ├── Models/
+    ├── User.php
+  ├── Http/
+    ├── Controllers/
+       ├── Controller.php
+       ├── ResumeController.php
+           ├── Freelancer
+             ├── ResumeContrilloer.php
+           ├── Auth
+             |__FreelancerRegistrationController.php
+  ├── Filament/
+     ├── Resourses/
+       ├── UserResourse.php
+       ├── FreelancerResourse.php
+       ├── UserResourse
+         ├── Pages/
+          ├── CreateUser.php
+          ├── EditUser.php
+          ├── ListUsers.php
+       ├── FreelancerResourse
+         ├── Pages/
+          ├── CreateFreelancer.php
+          ├── EditFreelancer.php
+          ├── ListFreelancer.php
+
+
+├── bootstrap/
+├── config/
+├── database/
+├── public/
+  ├── js/
+    ├── skills.js
+  ├── css/
+    ├── style.css
+├── resources/
+   ├── views/
+     ├── resumes/
+       ├── index.blade.php
+     ├── freelancer/
+       ├── dashboard.blade.php
+       ├── edit-resume.blade.php
+     ├── auth/
+       ├── freelancer-register.blade.php
+├── routes/
+├── storage/
+├── artisan
+├── composer.json
+└── .env
+
+
+admin@admin.ru
+
+admin
+adminadmin
+
+
+http://localhost:8000/resumes
+
+http://localhost:8000/freelancer/register
+

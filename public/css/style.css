@@ -1,0 +1,33 @@
+#skill_suggestions {
+    border: 1px solid #ccc;
+    background: #fff;
+    position: absolute;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.skill-suggestion {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.skill-suggestion:hover {
+    background-color: #f0f0f0;
+}
+
+#selected_skills .tag {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 15px;
+    font-size: 14px;
+}
+
+.remove-tag {
+    margin-left: 10px;
+    cursor: pointer;
+    color: white;
+}
