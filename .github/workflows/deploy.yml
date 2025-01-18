@@ -30,6 +30,8 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         script: |
           cd /var/www/laravel
+          git status
           git pull origin main
+          ls -la
           docker-compose down
           docker-compose up -d
