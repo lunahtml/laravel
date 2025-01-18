@@ -1,4 +1,4 @@
-name: Laravel CI/CD
+name: Deploy to VPS
 
 on:
   push:
@@ -10,6 +10,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # 1. Клонируем репозиторий
-    - name: Checkout repository
+    - name: Checkout code
       uses: actions/checkout@v3
+
+    - name: Test SSH connection
+      uses: appleboy/ssh-action@v0.1.11
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USER }}
+        key: ${{ secrets.SSH_KEY }}
+        script: |
+          echo "SSH connection works!"
+
+    - name: Deploy to VPS
+      uses: appleboy/ssh-action@v0.1.11
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USER }}
+        key: ${{ secrets.SSH_KEY }}
+        script: |
+          cd /var/www/laravel
+          git pull origin main
+          docker-compose down
+          docker-compose up -d
